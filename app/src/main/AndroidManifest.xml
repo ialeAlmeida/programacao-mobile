@@ -13,7 +13,7 @@
         android:theme="@style/Theme.MyApplicationaulaMobile"
         tools:targetApi="33">
         <activity
-            android:name=".telaInicial"
+            android:name=".TelaInicial"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

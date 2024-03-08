@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.view.View;
 
-public class telaInicial extends AppCompatActivity {
+public class TelaInicial extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +21,13 @@ public class telaInicial extends AppCompatActivity {
 
     private void botoes() {
 
-        Button somar = (Button) findViewById(R.id.inc);
-        Button buttonTelefone = (Button) findViewById(R.id.tel);
-
+        Button bttnIncrementar = (Button) findViewById(R.id.inc);
+        Button bttnTelefone = (Button) findViewById(R.id.tel);
+        Button bttnAlarme = (Button) findViewById(R.id.alarme);
+        Button bttnVoltar = (Button)findViewById(R.id.voltar);
         TextView numberInc = (TextView) findViewById(R.id.number0);
-        buttonTelefone.setOnClickListener(new View.OnClickListener() {
+
+        bttnTelefone.setOnClickListener(new View.OnClickListener() {
             Intent i = new Intent(Intent.ACTION_DIAL);
 
             @Override
@@ -34,5 +36,6 @@ public class telaInicial extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
     }
 }

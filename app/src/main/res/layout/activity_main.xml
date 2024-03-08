@@ -8,109 +8,54 @@
     android:backgroundTint="#DD3E57E3"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="372dp"
-        android:layout_height="60dp"
-        android:backgroundTint="#FFFFFF"
-        android:ems="10"
-        android:hint="********"
-        android:inputType="textPassword"
-        android:textColorHighlight="#FFFFFF"
-        android:textColorHint="#86FFFCFC"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.893" />
-
-    <TextView
-        android:id="@+id/textView3"
+    <Button
+        android:id="@+id/buttonSingIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:text="JOIN NOW"
-        android:textColor="#FFFFFF"
+        android:text="Login"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.927"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.001" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView4"
+    <EditText
+        android:id="@+id/pEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="1dp"
-        android:text="Password"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textSize="50px"
-        app:layout_constraintBottom_toTopOf="@+id/password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/pSenha"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.992" />
+        tools:layout_editor_absoluteX="100dp" />
+
+    <EditText
+        android:id="@+id/pSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="46dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSingIn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="100dp" />
 
     <TextView
         android:id="@+id/textEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="E-mail"
-        android:textColor="#FFFFFF"
-        android:textSize="50px"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        tools:layout_editor_absoluteX="111dp"
+        tools:layout_editor_absoluteY="92dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="9dp"
-        android:text="FORGOT PASSWORD?"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.087"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:layout_constraintVertical_bias="0.001" />
-
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="372dp"
-        android:layout_height="54dp"
-        android:backgroundTint="#FFFFFF"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="371dp"
-        android:layout_height="51dp"
-        android:backgroundTint="#00FFFFFF"
-        android:keyboardNavigationCluster="true"
-        android:text="SING IN"
-        android:textColorHighlight="#28FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.285"
-        app:strokeColor="#FFFFFF"
-        app:strokeWidth="2dp" />
+        android:text="Senha"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="272dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -7,30 +7,29 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setar visualmente a tela activity_main
         setContentView(R.layout.activity_main);
 
+        singInBtn();
 
     }
 
     private void singInBtn() {
-        Button loginBtn = (Button) findViewById(R.id.button2);
-        //Button usuario = (Button) findViewById(R.id.editTextTextEmailAddress);
-        //Button senha = (Button) findViewById(R.id.password);
+        Button loginBttn = (Button) findViewById(R.id.buttonSingIn);
+        TextView usuario = (TextView) findViewById(R.id.pEmail);
+        TextView senha = (TextView) findViewById(R.id.pSenha);
 
-        Intent i = new Intent(this, telaInicial.class);
+        Intent i1 = new Intent(this, TelaInicial.class);
 
-        loginBtn.setOnClickListener(new View.OnClickListener() {
+        loginBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(i);
+                startActivity(i1);
             }
         });
         }

@@ -17,7 +17,7 @@ public class TelaInicial extends AppCompatActivity {
         setContentView(R.layout.activity_tela_inicial);
 
         botoes();
-        createAlarm();
+        //createAlarm();
     }
 
     private void botoes() {
@@ -27,7 +27,7 @@ public class TelaInicial extends AppCompatActivity {
         Button bttnAlarme = (Button) findViewById(R.id.alarme);
         Button bttnVoltar = (Button)findViewById(R.id.voltar);
         TextView numberInc = (TextView) findViewById(R.id.number0);
-
+        Button bttnNext = (Button) findViewById(R.id.bttnNext);
         bttnTelefone.setOnClickListener(new View.OnClickListener() {
             Intent i = new Intent(Intent.ACTION_DIAL);
 
@@ -35,6 +35,14 @@ public class TelaInicial extends AppCompatActivity {
             public void onClick(View v) {
                 i.setData(Uri.parse("tel:986543265"));
                 startActivity(i);
+            }
+        });
+        Intent i1 = new Intent(this, Perfil.class);
+        bttnNext.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+               startActivity(i1);
             }
         });
 
@@ -48,14 +56,14 @@ public class TelaInicial extends AppCompatActivity {
 
     }
 
-    public void createAlarm(String message, int hour, int minutes) {
-        Intent i = new Intent(AlarmClock.ACTION_SET_ALARM)
-        .putExtra(AlarmClock.EXTRA_MESSAGE, message)
-        .putExtra(AlarmClock.EXTRA_HOUR, hour)
-        .putExtra(AlarmClock.EXTRA_MINUTES, minutes);
-
-        if (i.resolveActivity(getPackageManeger()) != null) {
-            startActivity(i);
-        }
-    }
+//    public void createAlarm(String message, int hour, int minutes) {
+//        Intent i = new Intent(AlarmClock.ACTION_SET_ALARM)
+//        .putExtra(AlarmClock.EXTRA_MESSAGE, message)
+//        .putExtra(AlarmClock.EXTRA_HOUR, hour)
+//        .putExtra(AlarmClock.EXTRA_MINUTES, minutes);
+//
+//        if (i.resolveActivity(getPackageManeger()) != null) {
+//            startActivity(i);
+//        }
+//    }
 }

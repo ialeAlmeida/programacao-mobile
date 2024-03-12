@@ -17,6 +17,7 @@ public class TelaInicial extends AppCompatActivity {
         setContentView(R.layout.activity_tela_inicial);
 
         botoes();
+        createAlarm();
     }
 
     private void botoes() {
@@ -37,5 +38,24 @@ public class TelaInicial extends AppCompatActivity {
             }
         });
 
+//        bttnAlarme.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                i.setData(Uri.parse("tel:986543265"));
+//                startActivity(i);
+//            }
+//        })
+
+    }
+
+    public void createAlarm(String message, int hour, int minutes) {
+        Intent i = new Intent(AlarmClock.ACTION_SET_ALARM)
+        .putExtra(AlarmClock.EXTRA_MESSAGE, message)
+        .putExtra(AlarmClock.EXTRA_HOUR, hour)
+        .putExtra(AlarmClock.EXTRA_MINUTES, minutes);
+
+        if (i.resolveActivity(getPackageManeger()) != null) {
+            startActivity(i);
+        }
     }
 }

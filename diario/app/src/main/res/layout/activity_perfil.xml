@@ -32,8 +32,8 @@
         android:inputType="phone"
         android:text="Telefone"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="441dp" />
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="508dp" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
@@ -43,8 +43,8 @@
         android:inputType="textEmailAddress"
         android:text="E-mail"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="385dp" />
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="451dp" />
 
     <EditText
         android:id="@+id/editTextText"
@@ -54,8 +54,8 @@
         android:inputType="text"
         android:text="Name"
         android:textAlignment="center"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="331dp" />
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="396dp" />
 
     <Button
         android:id="@+id/bttnEscolher"
@@ -65,5 +65,46 @@
         android:textSize="24sp"
         tools:layout_editor_absoluteX="134dp"
         tools:layout_editor_absoluteY="586dp" />
+
+    <TextView
+        android:id="@+id/textViewOpcao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opção"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.748" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="111dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.684" />
+
+    <ScrollView
+        android:layout_width="300dp"
+        android:layout_height="144dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.655">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
